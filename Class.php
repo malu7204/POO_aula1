@@ -1,35 +1,20 @@
-
-
 <?php
 
-class Aluno{
+class Produto{
     public string $nome;
-    public float $nota1;
-    public float $nota2;
-    
-     
-    function Exibir(){
-        echo "Aluno: $this->nome. Média: ";
+    public float $preco;
+    public int $estoque;
+    public function apresentar(){
+        echo "O produto $this->nome custa $this->preco reais e tem $this->estoque unidades em estoque.";
     }
+}
 
-    function Calcular(){
-    echo ($this->nota1 + $this->nota2)/2;
-    } 
-     
-    }
+$produto1 = new Produto;
+$produto1->nome = "caderno";
+$produto1->preco = 10.50;
+$produto1->estoque = 2;
 
-
-$aluno1 = new Aluno;
-$aluno1->nome = "João";
-$aluno1->nota1 = 7.0;
-$aluno1->nota2 = 5.0;
-
-$aluno1->Exibir();
-$aluno1->Calcular();
-
-
-
-
+$produto1->apresentar();
 
 
 
